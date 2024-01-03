@@ -67,9 +67,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="textFieldDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="n5x-y3-MFy"/>
-                                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="CKc-1s-dK4"/>
-                                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="dzJ-xB-tvc"/>
+                                                    <action selector="heightEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Qm9-Ph-g1d"/>
+                                                    <action selector="textFieldDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="61f-jI-FC3"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -93,8 +92,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="8v5-ah-Iq2"/>
-                                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="PZW-wa-Un2"/>
+                                                    <action selector="textFieldDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wET-36-m4p"/>
+                                                    <action selector="weightEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="q5q-Vm-F78"/>
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92x-98-h1b">
@@ -142,15 +141,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="FAk-S0-NW6">
                                 <rect key="frame" x="228.66666666666663" y="79.000000000000014" width="167" height="229.33333333333337"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nl-bI-JNb">
-                                <rect key="frame" x="34.666666666666657" y="627" width="361" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="lAp-8E-otr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -161,13 +151,10 @@
                             <constraint firstItem="FAk-S0-NW6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="C0k-aC-Vlk"/>
                             <constraint firstItem="FAk-S0-NW6" firstAttribute="trailing" secondItem="oh2-e0-b9n" secondAttribute="trailing" id="C3j-0T-fED"/>
                             <constraint firstItem="oSc-TN-Vmk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GZh-xZ-rJ7"/>
-                            <constraint firstItem="6Nl-bI-JNb" firstAttribute="leading" secondItem="pHM-1f-cs4" secondAttribute="leading" id="Jqc-oc-9dX"/>
                             <constraint firstItem="pHM-1f-cs4" firstAttribute="top" secondItem="cTc-Ye-a3x" secondAttribute="bottom" constant="30" id="L8c-7d-eD5"/>
                             <constraint firstItem="cTc-Ye-a3x" firstAttribute="width" secondItem="vgQ-wP-cyh" secondAttribute="width" multiplier="0.5" id="SRk-Sp-hhQ"/>
-                            <constraint firstItem="6Nl-bI-JNb" firstAttribute="top" secondItem="pHM-1f-cs4" secondAttribute="bottom" constant="20" id="TAn-Xi-XmL"/>
                             <constraint firstItem="Qre-nX-QHL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="dRo-Iw-qWE"/>
                             <constraint firstItem="oh2-e0-b9n" firstAttribute="top" secondItem="FAk-S0-NW6" secondAttribute="bottom" id="ddZ-yd-eA3"/>
-                            <constraint firstItem="6Nl-bI-JNb" firstAttribute="trailing" secondItem="pHM-1f-cs4" secondAttribute="trailing" id="deL-Z7-Xox"/>
                             <constraint firstItem="cTc-Ye-a3x" firstAttribute="trailing" secondItem="vgQ-wP-cyh" secondAttribute="trailing" id="hwV-QB-Ciz"/>
                             <constraint firstItem="Qre-nX-QHL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qhE-M1-KMR"/>
                             <constraint firstItem="pHM-1f-cs4" firstAttribute="leading" secondItem="vgQ-wP-cyh" secondAttribute="leading" id="skD-b9-33L"/>
@@ -186,7 +173,6 @@
                         <outletCollection property="labels" destination="Oc5-rc-Lrl" collectionClass="NSMutableArray" id="ao9-mG-lyv"/>
                         <outletCollection property="labels" destination="y0h-jZ-vSj" collectionClass="NSMutableArray" id="nXT-M9-VYh"/>
                         <outletCollection property="labels" destination="92x-98-h1b" collectionClass="NSMutableArray" id="s5D-c9-85P"/>
-                        <outletCollection property="labels" destination="6Nl-bI-JNb" collectionClass="NSMutableArray" id="hB2-4y-XBg"/>
                         <outletCollection property="inputTextField" destination="oh2-e0-b9n" collectionClass="NSMutableArray" id="Lr3-y2-6iA"/>
                         <outletCollection property="inputTextField" destination="vgQ-wP-cyh" collectionClass="NSMutableArray" id="F67-ae-Eg4"/>
                     </connections>
